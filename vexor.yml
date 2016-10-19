@@ -1,0 +1,6 @@
+script:
+  - docker build --rm -t docker_test .
+
+deploy:
+  - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+  - docker push saratovsource/docker_test
